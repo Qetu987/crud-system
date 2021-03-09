@@ -79,7 +79,7 @@ lo
     settings.py
 </span> 
 : at this file you can change script for cleaning data in tables (default param: 
-<span style="font-size: 16px; color: #ed9600; font-style: italic;">
-    23h 56m
+<span style="font-size: 12px; color: #ed9600; font-style: italic;">
+   default param: 23h 56m
 </span> 
 ) <br>
