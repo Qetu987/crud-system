@@ -7,18 +7,31 @@ import django.db.models.deletion
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('news', '0002_remove_news_title_slug'),
+        ("news", "0002_remove_news_title_slug"),
     ]
 
     operations = [
         migrations.CreateModel(
-            name='Comments',
+            name="Comments",
             fields=[
-                ('id', models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('author', models.CharField(max_length=150)),
-                ('date', models.DateTimeField(auto_now_add=True)),
-                ('contant', models.CharField(max_length=300)),
-                ('new', models.ForeignKey(on_delete=django.db.models.deletion.CASCADE, to='news.News')),
+                (
+                    "id",
+                    models.AutoField(
+                        auto_created=True,
+                        primary_key=True,
+                        serialize=False,
+                        verbose_name="ID",
+                    ),
+                ),
+                ("author", models.CharField(max_length=150)),
+                ("date", models.DateTimeField(auto_now_add=True)),
+                ("contant", models.CharField(max_length=300)),
+                (
+                    "new",
+                    models.ForeignKey(
+                        on_delete=django.db.models.deletion.CASCADE, to="news.News"
+                    ),
+                ),
             ],
         ),
     ]

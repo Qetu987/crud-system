@@ -29,7 +29,7 @@ class CommentsListView(APIView):
         return Response(serializer.data)
 
     def post(self, request, pk):
-        request.data['new'] = pk
+        request.data["new"] = pk
         serializer = CommentsSerializer(data=request.data)
 
         if serializer.is_valid():
@@ -43,7 +43,7 @@ class CommentsListView(APIView):
             serializer = NewsSerializer(new, data=request.data)
             if serializer.is_valid():
                 serializer.save()
-                return Response(serializer.data) 
+                return Response(serializer.data)
         except News.DoesNotExist:
             return Response(status=404)
 
@@ -57,12 +57,12 @@ class CommentsListView(APIView):
             comments = Comments.objects.get(new=pk)
             comments.delete()
         except:
-            print('no comments')
+            print("no comments")
 
         new.delete()
         return Response(status=204)
 
-    
+
 # clsdd for put and delete comment
 class CommentsChangeView(APIView):
     def put(self, request, pk):
@@ -71,7 +71,7 @@ class CommentsChangeView(APIView):
             serializer = CommentsSerializer(comm, data=request.data)
             if serializer.is_valid():
                 serializer.save()
-                return Response(serializer.data) 
+                return Response(serializer.data)
         except Comments.DoesNotExist:
             return Response(status=404)
 

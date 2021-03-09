@@ -5,5 +5,5 @@ from .models import News
 def clear():
     news = News.objects.all()
     for new in news:
-        new.upvotes = '0'
+        new.upvotes = "0"
         new.save()
