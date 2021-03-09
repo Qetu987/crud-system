@@ -6,6 +6,7 @@ from .models import News, Comments
 from .serializers import NewsSerializer, CommentsSerializer
 
 
+# class for get and post request to news
 class NewsListView(APIView):
     def get(self, request):
         news = News.objects.all()
@@ -19,6 +20,7 @@ class NewsListView(APIView):
         return Response(request.data, status=201)
 
 
+# class for get and post request to comments and delete, put request to news
 class CommentsListView(APIView):
     def get(self, request, pk):
         news = News.objects.get(id=pk)
@@ -61,9 +63,7 @@ class CommentsListView(APIView):
         return Response(status=204)
 
     
-
-
-
+# clsdd for put and delete comment
 class CommentsChangeView(APIView):
     def put(self, request, pk):
         try:

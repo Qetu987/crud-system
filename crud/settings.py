@@ -37,9 +37,18 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+
+    'django_crontab',
     'news',
     'rest_framework'
 ]
+
+
+# cron создание скрипта на выполнение каждые 23ч 56м
+CRONJOBS = [
+    ('*/56 23 * * *', 'news.cron.clear')
+]
+
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
