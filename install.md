@@ -1,14 +1,14 @@
-# install project
+# Install project
 
-## install and activate enviroment
+## Install and activate enviroment
 
-for installing project, you need to download this from git
+For installing project you need to download this from git
 
 ```
 https://github.com/Qetu987/test_task.git
 ```
 
-After you need to install venv and activate
+After that you need to install venv and activate
 
 for unix
 ```
@@ -22,16 +22,17 @@ python -m venv venv
 venv\Scripts\activate
 ```
 
-## init db and migrate
+## Init db and migrate
 
-for create and migrate db fields 
+To create and migrate db fields 
+
 ```
 python3 manage.py migrate
 ```
 
-## start project 
+## Start project 
 
-for switch on daily task 
+to switch on daily task 
 
 ```
 python3 manage.py crontab add .
