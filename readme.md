@@ -3,9 +3,6 @@
 
 ## postman links
 
-<hr>
-<br>
-
 - :shipit: [requests](https://documenter.getpostman.com/view/14863955/Tz5nbJJQ) to news 
 
 - :shipit: [request](https://documenter.getpostman.com/view/14863955/Tz5nbJJR) to comments
@@ -14,25 +11,17 @@
 
 ## Code Formatter
 
-<hr>
-<br>
-
 code was formated by "[black](https://github.com/psf/black)" formater
 
 <br>
 
 ## Installing
-<hr>
-<br>
 
 
 for installing project [use](./install.md) this
 <br>
 
 ## About project
-
-<hr>
-<br>
 
 project have 2 tables ***News*** and ***Comments*** 
 </br>
