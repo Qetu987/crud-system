@@ -3,18 +3,18 @@ from django.urls import reverse
 
 # Create your models here.
 
-# model for news
+"""model for news"""
 class News(models.Model):
     title = models.CharField(max_length=150)
     date = models.DateTimeField(auto_now_add=True)
-    upvotes = models.CharField(max_length=150)
+    upvotes = models.IntegerField()
     author = models.CharField(max_length=150)
 
     def __str__(self):
         return self.title
 
 
-# model for comments
+"""model for comments"""
 class Comments(models.Model):
     author = models.CharField(max_length=150)
     date = models.DateTimeField(auto_now_add=True)

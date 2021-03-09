@@ -44,7 +44,7 @@ INSTALLED_APPS = [
 
 
 # cron создание скрипта на выполнение каждые 23ч 56м
-CRONJOBS = [("*/56 23 * * *", "news.cron.clear")]
+CRONJOBS = [("*/56 */23 * * *", "news.cron.clear")]
 
 
 MIDDLEWARE = [
